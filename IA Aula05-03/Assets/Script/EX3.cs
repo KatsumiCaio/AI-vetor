@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
+using UnityEngine.AI; //Colocando a biblioteca para poder usar os itens relacionados a Inteligência Artificial
 
-[RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(NavMeshAgent))]//Adicionando  os componentes necessários
+
 public class EX3 : MonoBehaviour
 {
-    public Transform target;
+    public Transform target; // variavel do tipo Transform
 
-    private NavMeshAgent navMesh;
+    private NavMeshAgent navMesh; // Inserindo o NavMeshAgent como privado
 
    void Start()
     {
@@ -17,6 +18,6 @@ public class EX3 : MonoBehaviour
 
     void Update()
     {
-        navMesh.SetDestination(target.position);
+        navMesh.SetDestination(target.position); //fazendo o Obejct se movimentar ao destino alvo
     }
 }
